@@ -1,16 +1,36 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-surface: 255, 255, 255;
+    --color-primary: 0, 0, 0;
+    --color-secondary: 102, 102, 102;
+    --color-highlight: 243, 243, 243;
+    --color-overlay: rgba(0, 0, 0, 0.4);
+    --color-disabled: rgba(0, 0, 0, 0.15);
+    --color-link: 4, 77, 210;
+    --border-color-image: rgba(0, 0, 0, 0.15);
+
+    --color-success: 0, 153, 92;
+    --color-error: 214, 19, 72;
+    --color-warning: rgb(255, 249, 235);
+  }
+
+  .dark {
+    --color-surface: 0, 0, 0;
+    --color-primary: 255, 255, 255;
+    --color-secondary: 153, 153, 153;
+    --color-highlight: 48, 48, 48;
+    --color-overlay: rgba(255, 255, 255, 0.4);
+    --color-disabled: rgba(255, 255, 255, 0.15);
+    --color-link: 105, 159, 255;
+    --border-color-image: rgba(255, 255, 255, 0.25);
+    --color-warning: rgba(255, 194, 51, 0.3);
+  }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
+html.dark {
+  background-color: black;
 }
